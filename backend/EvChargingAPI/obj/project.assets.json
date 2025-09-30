@@ -371,6 +371,29 @@
         "runtime": {
           "lib/net7.0/ZstdSharp.dll": {}
         }
+      },
+      "EvChargingApplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "EvChargingDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EvChargingApplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EvChargingApplication.dll": {}
+        }
+      },
+      "EvChargingDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/EvChargingDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EvChargingDomain.dll": {}
+        }
       }
     }
   },
@@ -961,10 +984,21 @@
         "zstdsharp.port.0.7.3.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+    },
+    "EvChargingApplication/1.0.0": {
+      "type": "project",
+      "path": "../EvChargingApplication/EvChargingApplication.csproj",
+      "msbuildProject": "../EvChargingApplication/EvChargingApplication.csproj"
+    },
+    "EvChargingDomain/1.0.0": {
+      "type": "project",
+      "path": "../EvChargingDomain/EvChargingDomain.csproj",
+      "msbuildProject": "../EvChargingDomain/EvChargingDomain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "EvChargingApplication >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.9",
       "Microsoft.AspNetCore.OpenApi >= 9.0.9",
       "MongoDB.Driver >= 3.5.0"
@@ -976,11 +1010,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+      "projectUniqueName": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
       "projectName": "EvChargingAPI",
-      "projectPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+      "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
+      "outputPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -996,7 +1030,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj": {
+              "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

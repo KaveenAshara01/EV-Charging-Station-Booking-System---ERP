@@ -1,0 +1,12 @@
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\EvChargingDomain.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\EvChargingDomain.AssemblyInfoInputs.cache
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\EvChargingDomain.AssemblyInfo.cs
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\EvChargingDomain.csproj.CoreCompileInputs.cache
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\EvChargingDomain.sourcelink.json
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\bin\Debug\net9.0\EvChargingDomain.deps.json
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\bin\Debug\net9.0\EvChargingDomain.dll
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\bin\Debug\net9.0\EvChargingDomain.pdb
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\EvChargingDomain.dll
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\refint\EvChargingDomain.dll
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\EvChargingDomain.pdb
+c:\Users\User\EAD Assignment\EV-Charging-Station-Booking-System---ERP\backend\EvChargingDomain\obj\Debug\net9.0\ref\EvChargingDomain.dll

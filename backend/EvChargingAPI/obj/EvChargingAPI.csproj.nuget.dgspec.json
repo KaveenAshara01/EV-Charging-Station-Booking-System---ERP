@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {}
+    "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {
+    "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+        "projectUniqueName": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
         "projectName": "EvChargingAPI",
-        "projectPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+        "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
+        "outputPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,7 +27,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj": {
+                "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -74,6 +78,132 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj",
+        "projectName": "EvChargingApplication",
+        "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj": {
+                "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj",
+        "projectName": "EvChargingDomain",
+        "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
