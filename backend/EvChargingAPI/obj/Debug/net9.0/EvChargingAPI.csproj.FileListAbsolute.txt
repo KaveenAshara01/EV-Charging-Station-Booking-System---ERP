@@ -48,3 +48,4 @@ C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\QRCoder.dll

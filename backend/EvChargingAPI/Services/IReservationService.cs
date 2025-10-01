@@ -17,5 +17,7 @@ namespace EvChargingAPI.Services
         Task<IEnumerable<Reservation>> GetByStationAsync(string stationId);
         Task<Reservation> UpdateReservationAsync(string ownerId, string reservationId, UpdateReservationDto dto);
         Task CancelReservationAsync(string ownerId, string reservationId);
+        Task<Reservation> ApproveReservationAsync(string approverId, string reservationId);
+
     }
 }
