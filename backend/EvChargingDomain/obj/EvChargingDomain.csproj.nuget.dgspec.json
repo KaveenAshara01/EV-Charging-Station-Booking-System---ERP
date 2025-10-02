@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj": {}
+    "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj": {
+    "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj",
+        "projectUniqueName": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj",
         "projectName": "EvChargingDomain",
-        "projectPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj",
+        "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\EvChargingDomain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\obj\\",
+        "outputPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
