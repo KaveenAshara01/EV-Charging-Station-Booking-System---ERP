@@ -169,9 +169,7 @@ namespace EvChargingAPI.Models
         public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAtUtc { get; set; } = DateTime.UtcNow;
 
-        // QR Signing secret (move to configuration in production)
-        [BsonIgnore]
-        private readonly string _qrSigningSecret = "ReplaceWithLongSecretFromConfigOrEnv";
+        
 
        
     }

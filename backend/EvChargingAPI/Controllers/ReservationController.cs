@@ -261,8 +261,10 @@ namespace EvChargingAPI.Controllers
         }
 
         // Create a reservation for the authenticated user
-        [HttpPost]
-        [Authorize]
+        // [HttpPost]
+        // [AllowAnonymous]
+       [HttpPost]
+       [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateReservationDto dto)
         {
             var ownerId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? User.FindFirst("sub")?.Value;
