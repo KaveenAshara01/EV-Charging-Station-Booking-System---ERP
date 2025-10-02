@@ -45,7 +45,8 @@ C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\obj\Debug\net9.0\EvChargingAPI.pdb
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\obj\Debug\net9.0\EvChargingAPI.genruntimeconfig.cache
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\obj\Debug\net9.0\ref\EvChargingAPI.dll
+C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\QRCoder.dll
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Asus\Documents\GitHub\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\QRCoder.dll
