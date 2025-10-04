@@ -1010,11 +1010,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
       "projectName": "EvChargingAPI",
-      "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+      "projectPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
+      "outputPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1031,8 +1031,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj": {
-              "projectPath": "c:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj"
+            "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj": {
+              "projectPath": "C:\\Users\\User\\EAD Assignment\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingApplication\\EvChargingApplication.csproj"
             }
           }
         }
