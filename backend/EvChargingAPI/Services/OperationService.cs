@@ -16,7 +16,7 @@ namespace EvChargingAPI.Services
 
         public async Task<Reservation> ValidateQr(string reservationId, string stationId)
         {
-            var reservation = await _reservationRepository.GetReservationById(reservationId);
+            var reservation = await _reservationRepository.GetByIdAsync(reservationId);
             if (reservation == null) return null;
 
             if (reservation.Status != "Approved") return null;
@@ -28,15 +28,15 @@ namespace EvChargingAPI.Services
 
         public async Task<Reservation> FinalizeReservation(string reservationId)
         {
-            var reservation = await _reservationRepository.GetReservationById(reservationId);
+            var reservation = await _reservationRepository.GetByIdAsync(reservationId);
             if (reservation == null) return null;
 
             if (reservation.Status != "Approved") return null;
 
             reservation.Status = "Completed";
-            reservation.CompletedAt = DateTime.UtcNow;
+            reservation.EndTime = DateTime.UtcNow;
 
-            await _reservationRepository.UpdateReservation(reservation);
+            await _reservationRepository.UpdateAsync(reservation);
 
             return reservation;
         }
