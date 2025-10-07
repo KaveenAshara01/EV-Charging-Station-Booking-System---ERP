@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EvChargingDomain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7e5b48219d44832fbc70ad6ea03f2052f8c6c64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85468995a92e932164406fe1fe15a495b73ddefc")]
 [assembly: System.Reflection.AssemblyProductAttribute("EvChargingDomain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EvChargingDomain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
