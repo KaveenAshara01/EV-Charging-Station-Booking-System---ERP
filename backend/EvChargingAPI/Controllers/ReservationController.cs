@@ -78,7 +78,9 @@ namespace EvChargingAPI.Controllers
                 UpdatedAtUtc = reservation.UpdatedAtUtc,
                 QrCodeData = reservation.QrCodeData,
                 ApprovedBy = reservation.ApprovedBy,
-                ApprovedAtUtc = reservation.ApprovedAtUtc
+                ApprovedAtUtc = reservation.ApprovedAtUtc,
+                StartTime = reservation.StartTime,
+                EndTime = reservation.EndTime
             });
         }
 

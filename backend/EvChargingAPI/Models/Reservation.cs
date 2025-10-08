@@ -1,6 +1,6 @@
 /*
  * File: Reservation.cs
- * Author: <YourName>
+ * Author: Kaveen Ashara
  * Description: Reservation document stored in MongoDB with QR generation logic
  */
 
@@ -43,8 +43,8 @@ namespace EvChargingAPI.Models
 
         public DateTime? ApprovedAtUtc { get; set; } = null;
 
-        public DateTime? StartTime { get; set; } = null;
-        public DateTime? EndTime { get; set; } = null;
+        // public DateTime? StartTime { get; set; } = null;
+        // public DateTime? EndTime { get; set; } = null;
 
         public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAtUtc { get; set; } = DateTime.UtcNow;
