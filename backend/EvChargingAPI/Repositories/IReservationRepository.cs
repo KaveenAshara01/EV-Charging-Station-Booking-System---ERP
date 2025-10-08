@@ -19,5 +19,7 @@ namespace EvChargingAPI.Repositories
         Task UpdateAsync(Reservation reservation);
         Task DeleteAsync(string reservationId);
         Task EnsureIndexesAsync();
+
+        Task<IEnumerable<Reservation>> GetAllAsync();
     }
 }

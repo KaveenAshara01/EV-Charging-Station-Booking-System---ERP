@@ -46,7 +46,11 @@ namespace EvChargingAPI.Models
         public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAtUtc { get; set; } = DateTime.UtcNow;
 
-        
+        // Reservation start time (local time at station)
+        public DateTime? StartTime { get; set; } = null;
+
+        // Reservation end time (local time at station)
+        public DateTime? EndTime { get; set; } = null;
 
        
     }

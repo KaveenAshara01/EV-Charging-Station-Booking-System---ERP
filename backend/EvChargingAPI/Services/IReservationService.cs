@@ -19,5 +19,8 @@ namespace EvChargingAPI.Services
         Task CancelReservationAsync(string ownerId, string reservationId);
         Task<Reservation> ApproveReservationAsync(string approverId, string reservationId);
 
+
+        Task<IEnumerable<Reservation>> GetAllAsync();
+
     }
 }

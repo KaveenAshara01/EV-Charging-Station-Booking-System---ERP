@@ -93,5 +93,13 @@ namespace EvChargingAPI.Repositories
             var filter = Builders<Reservation>.Filter.Eq(r => r.ReservationId, reservationId);
             await _collection.DeleteOneAsync(filter);
         }
+
+
+
+        // Purpose: get all reservations in the collection
+        public async Task<IEnumerable<Reservation>> GetAllAsync()
+        {
+            return await _collection.Find(Builders<Reservation>.Filter.Empty).ToListAsync();
+        }
     }
 }
