@@ -1450,19 +1450,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sanjana\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
       "projectName": "EvChargingAPI",
-      "projectPath": "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
-      "packagesPath": "C:\\Users\\sanjana\\.nuget\\packages\\",
-      "outputPath": "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
+      "projectPath": "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sanjana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -1539,13 +1539,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-    }
-  ]
+  }
 }

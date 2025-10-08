@@ -1,6 +1,6 @@
 /*
  * File: Reservation.cs
- * Author: <YourName>
+ * Author: Kaveen Ashara
  * Description: Reservation document stored in MongoDB with QR generation logic
  */
 
