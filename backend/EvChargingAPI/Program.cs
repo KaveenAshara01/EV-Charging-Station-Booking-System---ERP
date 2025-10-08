@@ -55,6 +55,9 @@ builder.Services.AddScoped<IStationService, StationService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddScoped<OperationService>();
+
+
 // ----------------------- Swagger + JWT -----------------------
 builder.Services.AddSwaggerGen(c =>
 {
@@ -140,6 +143,9 @@ builder.Services.AddAuthentication("Bearer")
 builder.Services.AddAuthorization();
 
 // ----------------------- Build App -----------------------
+builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
+// builder.Services.AddScoped<IReservationService, ReservationService>();
+
 var app = builder.Build();
 
 // ✅ Ensure MongoDB indexes are created for reservations
