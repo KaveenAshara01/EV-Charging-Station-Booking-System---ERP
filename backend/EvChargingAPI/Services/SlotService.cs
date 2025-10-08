@@ -104,5 +104,10 @@ namespace EvChargingAPI.Services
 
             await _repo.DeleteAsync(slotId);
         }
+
+        public async Task<IEnumerable<Slot>> GetAllSlotsAsync()
+        {
+            return await _repo.GetAllAsync();
+        }
     }
 }

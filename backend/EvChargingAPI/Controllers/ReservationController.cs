@@ -28,8 +28,8 @@ namespace EvChargingAPI.Controllers
         // Create a reservation for the authenticated user
         // [HttpPost]
         // [AllowAnonymous]
-       [HttpPost]
-       [Authorize]
+        [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateReservationDto dto)
         {
             var ownerId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? User.FindFirst("sub")?.Value;
@@ -237,6 +237,29 @@ namespace EvChargingAPI.Controllers
             {
                 return BadRequest(new { error = ex.Message });
             }
+        }
+
+
+        [HttpGet]
+        [Authorize(Roles = "BACKOFFICE,STATION_OPERATOR")]
+        public async Task<IActionResult> GetAll()
+        {
+            var list = await _service.GetAllAsync();
+            var resp = list.Select(r => new ReservationResponseDto
+            {
+                ReservationId = r.ReservationId,
+                OwnerId = r.OwnerId,
+                StationId = r.StationId,
+                SlotId = r.SlotId,
+                ReservationTimeUtc = r.ReservationTimeUtc,
+                Status = r.Status,
+                CreatedAtUtc = r.CreatedAtUtc,
+                UpdatedAtUtc = r.UpdatedAtUtc,
+                QrCodeData = r.QrCodeData,
+                ApprovedBy = r.ApprovedBy,
+                ApprovedAtUtc = r.ApprovedAtUtc
+            });
+            return Ok(resp);
         }
     }
 }

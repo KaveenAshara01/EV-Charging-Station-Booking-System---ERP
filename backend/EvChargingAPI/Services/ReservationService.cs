@@ -634,6 +634,16 @@ namespace EvChargingAPI.Services
 
             return reservation;
         }
+
+
+        // -----------------------------
+        // Get All Reservations
+        // -----------------------------
+        public async Task<IEnumerable<Reservation>> GetAllAsync()
+        {
+            return await _repo.GetAllAsync();
+        }
+
     }
 }
 
