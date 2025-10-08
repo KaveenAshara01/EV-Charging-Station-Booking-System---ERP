@@ -6,24 +6,13 @@ namespace EvChargingAPI.Models
     public class Station
     {
         [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public string StationUniqueId { get; set; } = Guid.NewGuid().ToString();
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? Id { get; set; }
 
-        // Non-unique display name or code
-        public string StationId { get; set; } = string.Empty;
-
-        public string Name { get; set; } = string.Empty;
-
-        public LocationData Location { get; set; } = new LocationData();
-
-        public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAtUtc { get; set; } = DateTime.UtcNow;
-    }
-
-    public class LocationData
-    {
+        public string StationId { get; set; } = string.Empty; // like name (not unique)
+        public string UniqueIdentifier { get; set; } = string.Empty; // unique ID
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public string Address { get; set; } = string.Empty;
+        public string? Address { get; set; }
     }
 }
