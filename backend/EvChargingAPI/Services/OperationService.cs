@@ -40,5 +40,24 @@ namespace EvChargingAPI.Services
 
             return reservation;
         }
+
+        public async Task<Reservation> StartReservation(string reservationId)
+{
+    var reservation = await _reservationRepository.GetByIdAsync(reservationId);
+    if (reservation == null) return null;
+
+    // Only allow starting if status is still Approved
+    if (reservation.Status != "Approved") return null;
+
+    // Set StartTime if not already set
+    if (reservation.StartTime == null)
+    {
+        reservation.StartTime = DateTime.UtcNow;
+        await _reservationRepository.UpdateAsync(reservation);
+    }
+
+    return reservation;
+}
+
     }
 }

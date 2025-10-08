@@ -38,5 +38,17 @@ namespace EvChargingAPI.Controllers
 
             return Ok(new { message = "Charging session completed", reservation });
         }
+
+        // POST: api/operations/start
+        [Authorize(Roles = "STATION_OPERATOR")]
+        [HttpPost("start")]
+        public async Task<IActionResult> StartReservation([FromBody] FinalizeRequest request)
+        {
+            var reservation = await _operationService.StartReservation(request.ReservationId);
+            if (reservation == null) return BadRequest(new { message = "Unable to start reservation" });
+
+            return Ok(new { message = "Charging session started", reservation });
+        }
+
     }
 }
