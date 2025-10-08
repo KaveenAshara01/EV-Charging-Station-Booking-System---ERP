@@ -73,6 +73,26 @@ namespace EvChargingAPI.Controllers
             });
         }
 
+    // List all slots (auth required)
+            [HttpGet]
+            [Authorize]
+            public async Task<IActionResult> GetAll()
+            {
+                var slots = await _service.GetAllSlotsAsync();
+                var resp = slots.Select(s => new SlotResponseDto
+                {
+                SlotId = s.SlotId,
+                StationId = s.StationId,
+                StartUtc = s.StartUtc,
+                EndUtc = s.EndUtc,
+                IsAvailable = s.IsAvailable,
+                ReservationId = s.ReservationId,
+                Label = s.Label,
+                CreatedAtUtc = s.CreatedAtUtc,
+                UpdatedAtUtc = s.UpdatedAtUtc
+                });
+                return Ok(resp);
+            }
         // List slots for a station in a window (auth required)
         [HttpGet("station/{stationId}")]
         [Authorize]

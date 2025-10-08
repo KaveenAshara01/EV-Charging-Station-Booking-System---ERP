@@ -18,5 +18,6 @@ namespace EvChargingAPI.Services
         Task<IEnumerable<Slot>> GetAvailableSlotsForStationAsync(string stationId, DateTime fromUtc, DateTime toUtc);
         Task<Slot> UpdateSlotAsync(string slotId, CreateSlotDto dto); // reuse Create DTO for update
         Task DeleteSlotAsync(string slotId);
+        Task<IEnumerable<Slot>> GetAllSlotsAsync();
     }
 }

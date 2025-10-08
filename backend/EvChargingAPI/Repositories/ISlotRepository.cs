@@ -19,5 +19,7 @@ namespace EvChargingAPI.Repositories
         Task UpdateAsync(Slot slot);
         Task DeleteAsync(string slotId);
         Task EnsureIndexesAsync();
+
+        Task<IEnumerable<Slot>> GetAllAsync();
     }
 }

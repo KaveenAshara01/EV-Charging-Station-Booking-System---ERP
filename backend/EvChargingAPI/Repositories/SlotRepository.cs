@@ -85,5 +85,10 @@ namespace EvChargingAPI.Repositories
             var filter = Builders<Slot>.Filter.Eq(s => s.SlotId, slotId);
             await _collection.DeleteOneAsync(filter);
         }
+
+            public async Task<IEnumerable<Slot>> GetAllAsync()
+    {
+        return await _collection.Find(Builders<Slot>.Filter.Empty).ToListAsync();
+    }
     }
 }
