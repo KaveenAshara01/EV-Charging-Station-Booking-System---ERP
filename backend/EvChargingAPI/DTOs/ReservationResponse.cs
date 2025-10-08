@@ -20,5 +20,8 @@ namespace EvChargingAPI.DTOs
         public string? QrCodeData { get; set; } = null;  // base64 PNG
         public string? ApprovedBy { get; set; } = null;
         public DateTime? ApprovedAtUtc { get; set; } = null;
+
+        public DateTime? StartTime { get; set; } = null;
+        public DateTime? EndTime { get; set; } = null;
     }
 }

@@ -18,7 +18,7 @@ namespace EvChargingAPI.Controllers
         }
 
         // POST: api/operations/validate
-        [Authorize(Roles = "Operator")]
+        [Authorize(Roles = "STATION_OPERATOR")]
         [HttpPost("validate")]
         public async Task<IActionResult> ValidateQr([FromBody] QrValidationRequest request)
         {
@@ -29,7 +29,7 @@ namespace EvChargingAPI.Controllers
         }
 
         // POST: api/operations/finalize
-        [Authorize(Roles = "Operator")]
+        [Authorize(Roles = "STATION_OPERATOR")]
         [HttpPost("finalize")]
         public async Task<IActionResult> FinalizeReservation([FromBody] FinalizeRequest request)
         {

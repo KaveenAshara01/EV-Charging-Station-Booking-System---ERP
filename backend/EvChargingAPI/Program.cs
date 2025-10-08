@@ -53,6 +53,9 @@ builder.Services.AddScoped<ISlotService, SlotService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddScoped<OperationService>();
+
+
 // ----------------------- Swagger + JWT -----------------------
 builder.Services.AddSwaggerGen(c =>
 {

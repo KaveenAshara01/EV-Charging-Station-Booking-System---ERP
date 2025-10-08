@@ -43,8 +43,8 @@ namespace EvChargingAPI.Models
 
         public DateTime? ApprovedAtUtc { get; set; } = null;
 
-         public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime? StartTime { get; set; } = null;
+        public DateTime? EndTime { get; set; } = null;
 
         public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAtUtc { get; set; } = DateTime.UtcNow;
