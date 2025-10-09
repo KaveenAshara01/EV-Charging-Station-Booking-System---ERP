@@ -172,6 +172,7 @@ namespace EvChargingAPI.Controllers
             }
             catch (UnauthorizedAccessException)
             {
+                Console.WriteLine("Unauthorized access attempt.");
                 return Forbid();
             }
             catch (KeyNotFoundException)
