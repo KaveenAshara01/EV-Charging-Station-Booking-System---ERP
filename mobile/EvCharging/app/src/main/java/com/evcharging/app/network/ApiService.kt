@@ -3,6 +3,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
@@ -36,6 +37,12 @@ interface ApiService {
 
     @POST("Reservations")
     fun createReservation(@Body request: CreateReservationRequest): Call<Void>
+
+    @GET("Reservations/{id}")
+    fun getReservationById(@Path("id") reservationId: String): Call<ReservationResponse>
+
+    @DELETE("Reservations/{id}")
+    fun deleteReservation(@Path("id") reservationId: String): Call<Void>
 
 
 }
