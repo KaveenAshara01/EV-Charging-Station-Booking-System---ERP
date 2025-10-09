@@ -27,6 +27,8 @@
         <activity android:name=".ui.RegisterOwnerActivity" />
         <activity android:name=".ui.OperatorDashboardActivity" />
         <activity android:name=".ui.QrValidationResultActivity" />
+        <activity android:name=".ui.UserDashboardActivity" />
+        <activity android:name=".ui.CreateReservationActivity" />
 
 
         <activity

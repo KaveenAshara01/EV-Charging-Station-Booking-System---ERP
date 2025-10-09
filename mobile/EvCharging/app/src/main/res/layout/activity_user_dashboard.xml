@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1E1E1E"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TextView
+android:id="@+id/txtWelcome"
+android:text="Welcome User"
+android:textSize="20sp"
+android:textColor="#FFFFFF"
+    android:textStyle="bold"
+    android:layout_marginBottom="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+<Button
+android:id="@+id/btnCreateReservation"
+android:text="Create Reservation"
+android:backgroundTint="#3A86FF"
+    android:textColor="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+<Button
+android:id="@+id/btnMyReservations"
+android:text="My Reservations"
+android:backgroundTint="#3A86FF"
+android:textColor="#FFFFFF"
+android:layout_marginTop="8dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content" />
+
+<TextView
+android:text="Upcoming Reservations:"
+android:textSize="16sp"
+android:textStyle="bold"
+android:textColor="#FFFFFF"
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/recyclerViewReservations"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_marginTop="8dp"
+android:layout_weight="1"
+android:background="#2A2A2A"
+    android:padding="8dp" />
+
+    </LinearLayout>

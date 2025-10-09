@@ -3,8 +3,9 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
-
+import retrofit2.http.Path
 
 
 interface ApiService {
@@ -22,6 +23,19 @@ interface ApiService {
 
     @POST("Operations/finalize")
     fun finalizeReservation(@Body request: FinalizeRequest): Call<QrValidationResponse>
+
+    @GET("Reservations/me")
+    fun getMyReservations(): Call<List<com.evcharging.app.network.ReservationResponse>>
+
+    @GET("Stations")
+    fun getStations(): Call<List<StationResponse>>
+
+    @GET("Stations/{id}/slots")
+    fun getAvailableSlots(@Path("id") stationId: String): Call<List<SlotResponse>>
+
+
+    @POST("Reservations")
+    fun createReservation(@Body request: CreateReservationRequest): Call<Void>
 
 
 }

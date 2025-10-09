@@ -1,6 +1,11 @@
 using EvChargingAPI.Models;
 using EvChargingAPI.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace EvChargingAPI.Controllers
 {
@@ -9,10 +14,12 @@ namespace EvChargingAPI.Controllers
     public class StationsController : ControllerBase
     {
         private readonly IStationService _stationService;
+        private readonly ISlotService _slotService;
 
-        public StationsController(IStationService stationService)
+        public StationsController(IStationService stationService, ISlotService slotService)
         {
             _stationService = stationService;
+            _slotService = slotService;
         }
 
         [HttpGet]
@@ -60,6 +67,36 @@ namespace EvChargingAPI.Controllers
 
             await _stationService.DeleteStationAsync(id);
             return NoContent();
+        }
+
+
+
+        [HttpGet("{stationId}/slots")]
+        public async Task<IActionResult> GetAvailableSlots(string stationId)
+        {
+            var response = await _slotService.GetAllSlotsAsync();
+            if (response == null || !response.Any())
+            {
+                return NotFound(new { Message = "No available slots found for the specified station." });
+            }
+
+            var availableSlots = response
+                .Where(slot => slot.StationId == stationId && slot.IsAvailable)
+                .ToList();
+
+            if (!availableSlots.Any())
+            {
+                return NotFound(new { Message = "No available slots found for the specified station." });
+            }
+
+            return Ok(availableSlots);
+        //     var response = await _slotService.GetAllSlotsAsync();
+        //     Console.WriteLine($"Response {response}");
+        // if (response == null || !response.Any())
+        // {
+        //     return NotFound(new { Message = "No available slots found for the specified station." });
+        // }
+        //     return Ok(response);
         }
     }
 }
