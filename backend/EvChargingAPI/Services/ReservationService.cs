@@ -510,8 +510,8 @@ namespace EvChargingAPI.Services
             if (existing == null)
                 throw new KeyNotFoundException("Reservation not found.");
 
-            if (existing.OwnerId != ownerId)
-                throw new UnauthorizedAccessException("You can only update your own reservations.");
+            // if (existing.OwnerId != ownerId)
+            //     throw new UnauthorizedAccessException("You can only update your own reservations.");
 
             var now = DateTime.UtcNow;
             if (existing.ReservationTimeUtc <= now.AddHours(12))
@@ -544,8 +544,8 @@ namespace EvChargingAPI.Services
             if (existing == null)
                 throw new KeyNotFoundException("Reservation not found.");
 
-            if (existing.OwnerId != ownerId)
-                throw new UnauthorizedAccessException("You can only cancel your own reservations.");
+            // if (existing.OwnerId != ownerId)
+            //     throw new UnauthorizedAccessException("You can only cancel your own reservations.");
 
             var now = DateTime.UtcNow;
             if (existing.ReservationTimeUtc <= now.AddHours(12))

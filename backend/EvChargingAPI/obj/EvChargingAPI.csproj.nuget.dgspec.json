@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {}
+    "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {}
   },
   "projects": {
-    "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {
+    "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
         "projectName": "EvChargingAPI",
-        "projectPath": "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
-        "packagesPath": "C:\\Users\\sanjana\\.nuget\\packages\\",
-        "outputPath": "E:\\github\\EV-charging-platform\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\EvChargingAPI.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Documents\\GitHub\\EV-Charging-Station-Booking-System---ERP\\backend\\EvChargingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sanjana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
