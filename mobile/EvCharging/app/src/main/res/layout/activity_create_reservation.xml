@@ -37,6 +37,31 @@
         android:background="#2A2A2A"
         android:spinnerMode="dropdown"/>
 
+    <TextView
+        android:text="Select Reservation Date &amp; Time"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnPickDateTime"
+        android:text="Pick Date &amp; Time"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3A86FF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvSelectedDateTime"
+        android:text="No time selected"
+        android:textColor="#BBBBBB"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/btnReserve"
         android:text="Reserve"

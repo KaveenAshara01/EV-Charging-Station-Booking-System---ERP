@@ -32,7 +32,12 @@ class UserDashboardActivity : AppCompatActivity() {
         val session = dbHelper.getUserSession()
         binding.txtWelcome.text = "Welcome, ${session?.get("name") ?: "User"}"
 
-        adapter = ReservationAdapter(reservationList)
+        adapter = ReservationAdapter(reservationList) { selectedReservation ->
+            val intent = Intent(this, ReservationDetailsActivity::class.java)
+            intent.putExtra("reservation", selectedReservation) // Parcelable!
+            startActivity(intent)
+        }
+
         binding.recyclerViewReservations.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewReservations.adapter = adapter
 
@@ -44,6 +49,12 @@ class UserDashboardActivity : AppCompatActivity() {
             startActivity(Intent(this, MyReservationsActivity::class.java))
         }
 
+        fetchMyReservations()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // 🔁 Refresh reservations whenever user returns to dashboard
         fetchMyReservations()
     }
 
