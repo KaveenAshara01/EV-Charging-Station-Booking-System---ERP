@@ -1,6 +1,10 @@
 package com.evcharging.app.network
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 // Matches the ReservationResponseDto returned by the backend
+@Parcelize
 data class ReservationResponse(
     val reservationId: String,
     val ownerId: String? = null,
@@ -15,4 +19,4 @@ data class ReservationResponse(
     val approvedAtUtc: String? = null,
     val startTime: String? = null,
     val endTime: String? = null
-)
+): Parcelable

@@ -1,5 +1,7 @@
 package com.evcharging.app.ui
 
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -13,6 +15,8 @@ import com.evcharging.app.network.StationResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.*
 
 class CreateReservationActivity : AppCompatActivity() {
 
@@ -21,22 +25,29 @@ class CreateReservationActivity : AppCompatActivity() {
     private lateinit var btnReserve: Button
     private lateinit var progressBar: ProgressBar
 
+    private lateinit var btnPickDateTime: Button
+    private lateinit var tvSelectedDateTime: TextView
+
     private var stationList = mutableListOf<StationResponse>()
     private var slotList = mutableListOf<SlotResponse>()
     private var selectedStationId: String? = null
     private var selectedSlotId: String? = null
+    private var selectedReservationTimeUtc: String? = null
 
     private lateinit var dbHelper: DatabaseHelper
+    private val calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_reservation)
-        ApiClient.init(this) // ✅ same as UserDashboardActivity
+        ApiClient.init(this)
 
         spinnerStation = findViewById(R.id.spinnerStation)
         spinnerSlot = findViewById(R.id.spinnerSlot)
         btnReserve = findViewById(R.id.btnReserve)
         progressBar = findViewById(R.id.progressBar)
+        btnPickDateTime = findViewById(R.id.btnPickDateTime)
+        tvSelectedDateTime = findViewById(R.id.tvSelectedDateTime)
 
         dbHelper = DatabaseHelper(this)
 
@@ -48,7 +59,6 @@ class CreateReservationActivity : AppCompatActivity() {
                 selectedStationId = station.stationId
                 fetchSlotsForStation(station.stationId)
             }
-
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
@@ -56,17 +66,59 @@ class CreateReservationActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 selectedSlotId = slotList.getOrNull(position)?.slotId
             }
-
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
+
+        btnPickDateTime.setOnClickListener { showDateTimePicker() }
 
         btnReserve.setOnClickListener {
             if (selectedStationId == null || selectedSlotId == null) {
                 Toast.makeText(this, "Please select station and slot", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            if (selectedReservationTimeUtc == null) {
+                Toast.makeText(this, "Please select reservation date and time", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             createReservation()
         }
+    }
+
+    private fun showDateTimePicker() {
+        val now = Calendar.getInstance()
+        DatePickerDialog(
+            this,
+            { _, year, month, day ->
+                calendar.set(Calendar.YEAR, year)
+                calendar.set(Calendar.MONTH, month)
+                calendar.set(Calendar.DAY_OF_MONTH, day)
+
+                TimePickerDialog(
+                    this,
+                    { _, hourOfDay, minute ->
+                        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+                        calendar.set(Calendar.MINUTE, minute)
+                        calendar.set(Calendar.SECOND, 0)
+                        calendar.set(Calendar.MILLISECOND, 0)
+
+                        selectedReservationTimeUtc = convertToUtcIso(calendar.time)
+                        tvSelectedDateTime.text = selectedReservationTimeUtc
+                    },
+                    now.get(Calendar.HOUR_OF_DAY),
+                    now.get(Calendar.MINUTE),
+                    true
+                ).show()
+            },
+            now.get(Calendar.YEAR),
+            now.get(Calendar.MONTH),
+            now.get(Calendar.DAY_OF_MONTH)
+        ).show()
+    }
+
+    private fun convertToUtcIso(date: Date): String {
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
+        dateFormat.timeZone = TimeZone.getTimeZone("UTC")
+        return dateFormat.format(date)
     }
 
     private fun fetchStations() {
@@ -89,7 +141,6 @@ class CreateReservationActivity : AppCompatActivity() {
                     ).apply {
                         setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                     }
-
                 } else {
                     Toast.makeText(this@CreateReservationActivity, "Failed to load stations", Toast.LENGTH_SHORT).show()
                 }
@@ -143,9 +194,9 @@ class CreateReservationActivity : AppCompatActivity() {
         val userId = session?.get("userId") ?: ""
 
         val request = CreateReservationRequest(
-            ownerId = userId,
             stationId = selectedStationId ?: "",
-            slotId = selectedSlotId ?: ""
+            slotId = selectedSlotId ?: "",
+            reservationTimeUtc = selectedReservationTimeUtc ?: ""
         )
 
         ApiClient.retrofitService.createReservation(request).enqueue(object : Callback<Void> {

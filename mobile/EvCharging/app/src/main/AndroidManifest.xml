@@ -29,6 +29,7 @@
         <activity android:name=".ui.QrValidationResultActivity" />
         <activity android:name=".ui.UserDashboardActivity" />
         <activity android:name=".ui.CreateReservationActivity" />
+        <activity android:name=".ui.ReservationDetailsActivity" />
 
 
         <activity
