@@ -76,13 +76,16 @@ class LoginActivity : AppCompatActivity() {
                             }
 
                             "USER" -> {
-                                // Keep current behavior (toast only)
                                 Toast.makeText(
                                     this@LoginActivity,
                                     "EV Owner login successful",
                                     Toast.LENGTH_SHORT
                                 ).show()
+                                val intent = Intent(this@LoginActivity, UserDashboardActivity::class.java)
+                                startActivity(intent)
+                                finish()
                             }
+
 
                             else -> {
                                 Toast.makeText(

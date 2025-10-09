@@ -36,5 +36,8 @@ namespace EvChargingAPI.Services
         {
             await _stationRepository.DeleteAsync(id);
         }
+
+
+
     }
 }
