@@ -6,6 +6,7 @@ import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Path
 
 
@@ -43,6 +44,12 @@ interface ApiService {
 
     @DELETE("Reservations/{id}")
     fun deleteReservation(@Path("id") reservationId: String): Call<Void>
+
+    @PUT("Reservations/{id}")
+    fun updateReservation(
+        @Path("id") reservationId: String,
+        @Body body: Map<String, String>
+    ): Call<Void>
 
 
 }
