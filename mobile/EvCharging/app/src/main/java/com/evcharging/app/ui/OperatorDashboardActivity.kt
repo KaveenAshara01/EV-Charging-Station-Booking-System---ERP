@@ -2,6 +2,7 @@ package com.evcharging.app.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.evcharging.app.database.DatabaseHelper
@@ -104,29 +105,83 @@ class OperatorDashboardActivity : AppCompatActivity() {
         }
     }
 
+//    private fun validateQr(reservationId: String, stationId: String) {
+//        val request = QrValidationRequest(reservationId, stationId)
+//
+//        ApiClient.retrofitService.validateQr(request).enqueue(object : Callback<QrValidationResponse> {
+//            override fun onResponse(call: Call<QrValidationResponse>, response: Response<QrValidationResponse>) {
+//                if (response.isSuccessful) {
+//                    val qrResp = response.body()
+//                    if (qrResp?.reservation != null) {
+//                        val intent = Intent(this@OperatorDashboardActivity, QrValidationResultActivity::class.java)
+//                        intent.putExtra("reservation", qrResp.reservation)
+//                        intent.putExtra("message", qrResp.message)
+//                        startActivity(intent)
+//                    } else {
+//                        Toast.makeText(this@OperatorDashboardActivity, "Invalid or expired QR reservation", Toast.LENGTH_SHORT).show()
+//                    }
+//                } else {
+//                    Toast.makeText(this@OperatorDashboardActivity, "Validation failed (${response.code()})", Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<QrValidationResponse>, t: Throwable) {
+//                Toast.makeText(this@OperatorDashboardActivity, "Error: ${t.localizedMessage}", Toast.LENGTH_SHORT).show()
+//            }
+//        })
+//    }
+
     private fun validateQr(reservationId: String, stationId: String) {
         val request = QrValidationRequest(reservationId, stationId)
 
+        Log.d("QR_VALIDATE", "Sending Request: reservationId=$reservationId , stationId=$stationId")
+
         ApiClient.retrofitService.validateQr(request).enqueue(object : Callback<QrValidationResponse> {
+
             override fun onResponse(call: Call<QrValidationResponse>, response: Response<QrValidationResponse>) {
-                if (response.isSuccessful) {
-                    val qrResp = response.body()
-                    if (qrResp?.reservation != null) {
-                        val intent = Intent(this@OperatorDashboardActivity, QrValidationResultActivity::class.java)
-                        intent.putExtra("reservation", qrResp.reservation)
-                        intent.putExtra("message", qrResp.message)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this@OperatorDashboardActivity, "Invalid or expired QR reservation", Toast.LENGTH_SHORT).show()
-                    }
+
+                Log.d("QR_VALIDATE", "HTTP Status: ${response.code()}")
+
+                if (!response.isSuccessful) {
+                    // **** PRINT FULL ERROR BODY FROM SERVER ****
+                    val errorBody = response.errorBody()?.string()
+                    Log.e("QR_VALIDATE", "Error Body: $errorBody")
+
+                    Toast.makeText(
+                        this@OperatorDashboardActivity,
+                        "Validation failed (${response.code()})",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    return
+                }
+
+                val qrResp = response.body()
+                Log.d("QR_VALIDATE", "Response Body: $qrResp")
+
+                if (qrResp?.reservation != null) {
+                    val intent = Intent(this@OperatorDashboardActivity, QrValidationResultActivity::class.java)
+                    intent.putExtra("reservation", qrResp.reservation)
+                    intent.putExtra("message", qrResp.message)
+                    startActivity(intent)
                 } else {
-                    Toast.makeText(this@OperatorDashboardActivity, "Validation failed (${response.code()})", Toast.LENGTH_SHORT).show()
+                    Log.w("QR_VALIDATE", "Reservation is null → Invalid QR")
+                    Toast.makeText(
+                        this@OperatorDashboardActivity,
+                        "Invalid or expired QR reservation",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 
             override fun onFailure(call: Call<QrValidationResponse>, t: Throwable) {
-                Toast.makeText(this@OperatorDashboardActivity, "Error: ${t.localizedMessage}", Toast.LENGTH_SHORT).show()
+                Log.e("QR_VALIDATE", "Network failure", t)
+                Toast.makeText(
+                    this@OperatorDashboardActivity,
+                    "Error: ${t.localizedMessage}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         })
     }
+
 }

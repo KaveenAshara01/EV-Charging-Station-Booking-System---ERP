@@ -2,13 +2,23 @@
 <resources>
 
     <!-- AppCompat-compatible theme -->
-    <style name="Theme.EVChargingApp" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <!-- Customize your theme colors here -->
+    <style name="Theme.EVChargingApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    <!-- Customize your theme colors here -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorAccent">@color/teal_200</item>
         <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
         <item name="android:navigationBarColor">?attr/colorPrimaryDark</item>
+    </style>
+
+    <!-- ✨ New Material Theme (only for login) -->
+    <style name="Theme.EVChargingApp.MaterialLogin" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#0066CC</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+        <item name="android:windowBackground">#F2F5F9</item>
     </style>
 
 </resources>

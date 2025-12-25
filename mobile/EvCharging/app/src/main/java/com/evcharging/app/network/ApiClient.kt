@@ -9,7 +9,7 @@ import android.content.Context
 
 object ApiClient {
 
-    private const val BASE_URL = "http://10.73.58.212:5074/api/"
+    private const val BASE_URL = "http://192.168.57.212:5074/api/"
 
     private lateinit var appContext: Context
 

@@ -1,54 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#1E1E1E"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
 
-<TextView
-android:id="@+id/txtWelcome"
-android:text="Welcome User"
-android:textSize="20sp"
-android:textColor="#FFFFFF"
-    android:textStyle="bold"
-    android:layout_marginBottom="12dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    <!-- Welcome text -->
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome, User"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-<Button
-android:id="@+id/btnCreateReservation"
-android:text="Create Reservation"
-android:backgroundTint="#3A86FF"
-    android:textColor="#FFFFFF"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    <!-- Create Reservation Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateReservation"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Create Reservation"
+        android:textAllCaps="false"
+        android:backgroundTint="#3A86FF"
+        android:textColor="@android:color/white"
+        app:cornerRadius="12dp"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconGravity="textStart"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
-<Button
-android:id="@+id/btnMyReservations"
-android:text="Find Stations"
-android:backgroundTint="#3A86FF"
-android:textColor="#FFFFFF"
-android:layout_marginTop="8dp"
-android:layout_width="match_parent"
-android:layout_height="wrap_content" />
+    <!-- Find Stations Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMyReservations"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Find Stations"
+        android:textAllCaps="false"
+        app:strokeColor="#3A86FF"
+        app:strokeWidth="2dp"
+        app:cornerRadius="12dp"
+        android:textColor="#3A86FF"
+        app:layout_constraintTop_toBottomOf="@id/btnCreateReservation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
 
-<TextView
-android:text="Upcoming Reservations:"
-android:textSize="16sp"
-android:textStyle="bold"
-android:textColor="#FFFFFF"
-    android:layout_marginTop="16dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    <!-- Section Title -->
+    <TextView
+        android:id="@+id/tvUpcoming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Upcoming Reservations"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnMyReservations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-<androidx.recyclerview.widget.RecyclerView
-android:id="@+id/recyclerViewReservations"
-android:layout_width="match_parent"
-android:layout_height="0dp"
-android:layout_marginTop="8dp"
-android:layout_weight="1"
-android:background="#2A2A2A"
-    android:padding="8dp" />
+    <!-- RecyclerView Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:layout_constraintTop_toBottomOf="@id/tvUpcoming"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewReservations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"/>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
