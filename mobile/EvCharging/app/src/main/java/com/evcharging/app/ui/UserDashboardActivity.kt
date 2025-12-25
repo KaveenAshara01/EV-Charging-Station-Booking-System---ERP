@@ -46,7 +46,7 @@ class UserDashboardActivity : AppCompatActivity() {
         }
 
         binding.btnMyReservations.setOnClickListener {
-            startActivity(Intent(this, MyReservationsActivity::class.java))
+            startActivity(Intent(this, FindStationsActivity::class.java))
         }
 
         fetchMyReservations()

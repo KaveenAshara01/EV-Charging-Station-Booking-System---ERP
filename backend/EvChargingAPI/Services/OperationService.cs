@@ -19,7 +19,7 @@ namespace EvChargingAPI.Services
             var reservation = await _reservationRepository.GetByIdAsync(reservationId);
             if (reservation == null) return null;
 
-            if (reservation.Status != "Approved") return null;
+            if (reservation.Status != "Approved" && reservation.Status != "Completed") return null;
 
             if (reservation.StationId != stationId) return null;
 

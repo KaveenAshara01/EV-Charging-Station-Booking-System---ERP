@@ -102,3 +102,9 @@ E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\
 E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\obj\Debug\net9.0\EvChargingAPI.pdb
 E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\obj\Debug\net9.0\EvChargingAPI.genruntimeconfig.cache
 E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\obj\Debug\net9.0\ref\EvChargingAPI.dll
+E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\publish\web.config
+E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\publish\appsettings.Development.json
+E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\publish\appsettings.json
+E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\publish\EvChargingAPI.deps.json
+E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\publish\EvChargingAPI.runtimeconfig.json
+E:\github\EV-charging-platform\EV-Charging-Station-Booking-System---ERP\backend\EvChargingAPI\bin\Debug\net9.0\publish\EvChargingAPI.staticwebassets.endpoints.json
